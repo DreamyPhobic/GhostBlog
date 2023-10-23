@@ -1,8 +1,7 @@
 name: ghost-blog
 services:
   - name: ghost-blog
-    run_command: npm start
-    build_command: npm install
+    dockerfile_path: Dockerfile
     git:
       repo_clone_url: https://github.com/DreamyPhobic/GhostBlog.git
       branch: master
