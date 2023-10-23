@@ -7,7 +7,7 @@ FROM ghost:latest
 
 # Copy the package.json and package-lock.json files to the working directory
 # COPY package*.json ./
-
+CMD ["ls", "-la"]
 # # Install the dependencies
 # RUN npm install
 

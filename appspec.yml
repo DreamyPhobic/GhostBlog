@@ -1,7 +1,7 @@
 name: ghost-blog
 services:
   - name: ghost-blog
-    dockerfile_path: Dockerfile
+    dockerfile_path: ./Dockerfile
     git:
       repo_clone_url: https://github.com/DreamyPhobic/GhostBlog.git
       branch: master
