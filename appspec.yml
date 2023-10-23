@@ -1,0 +1,6 @@
+name: Ghost blog
+services:
+  - name: Ghost blog
+    run_command: npm start
+    build_command: npm install
+    source_dir: /
