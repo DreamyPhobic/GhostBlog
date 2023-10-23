@@ -1,6 +1,6 @@
 FROM ghost:latest
 # Use the latest version of the official Node.js image as the base image
-FROM node:latest
+# FROM node:latest
 
 # Set the working directory to /app
 WORKDIR /app
