@@ -3,16 +3,16 @@ FROM ghost:latest
 # FROM node:latest
 
 # Set the working directory to /app
-WORKDIR /app
+# WORKDIR /app
 
 # Copy the package.json and package-lock.json files to the working directory
-COPY package*.json ./
+# COPY package*.json ./
 
 # # Install the dependencies
-RUN npm install
+# RUN npm install
 
 # # Copy the rest of the application code to the working directory
-COPY . .
+# COPY . .
 
 # Expose port 2368 for Ghost to listen on
 EXPOSE 2368
