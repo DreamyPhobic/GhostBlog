@@ -1,8 +1,8 @@
 name: ghost-blog
 services:
   - name: ghost-blog
-    
-    dockerfile_path: ./Dockerfile
+    build_command: ./build.sh
+    run_command: docker-compose up -d
     git:
       repo_clone_url: https://github.com/DreamyPhobic/GhostBlog.git
       branch: master

@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:5.7
+    platform: linux/x86_64
+    environment:
+      MYSQL_ROOT_PASSWORD: your_password
+      MYSQL_DATABASE: ghost_db
+      MYSQL_USER: ghost_user
+      MYSQL_PASSWORD: your_password
+    networks:
+      - ghost
+
+  ghost:
+    build: .
+    ports:
+      - '2368:2368'
+    environment:
+      database__client: mysql
+      database__connection__host: db
+      database__connection__user: ghost_user
+      database__connection__password: your_password
+      database__connection__database: ghost_db
+
+    networks:
+      - ghost
+
+networks:
+  ghost:
